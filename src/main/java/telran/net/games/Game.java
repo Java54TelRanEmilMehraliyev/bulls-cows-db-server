@@ -1,5 +1,8 @@
 package telran.net.games;
 
+import java.util.Date;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -10,16 +13,23 @@ public class Game {
 
 	@Id
     private int id;
-	private String player;
-	private int moves;
-	private boolean isWinner;
+	
+	@Column(name = "date")
+	private Date date;
+	
+	@Column(name = "sequence")
+	private String sequence;
+	
+	@Column(name = "isWinner")
+	private Boolean isWinner;
+	
 	
 	public Game() {}
 	
-	public Game(int id, String player, int moves, boolean isWinner) {
+	public Game(int id, Date date, String sequence, Boolean isWinner) {
 		this.id = id;
-		this.player = player;
-		this.moves = moves;
+		this.date = date;
+		this.sequence = sequence;
 		this.isWinner = isWinner;
 	}
 
@@ -31,33 +41,33 @@ public class Game {
 		this.id = id;
 	}
 
-	public String getPlayer() {
-		return player;
+	public Date getDate() {
+		return date;
 	}
 
-	public void setPlayer(String player) {
-		this.player = player;
+	public void setDate(Date date) {
+		this.date = date;
 	}
 
-	public int getMoves() {
-		return moves;
+	public String getSequence() {
+		return sequence;
 	}
 
-	public void setMoves(int moves) {
-		this.moves = moves;
+	public void setSequence(String sequence) {
+		this.sequence = sequence;
 	}
 
-	public boolean isWinner() {
+	public Boolean isWinner() {
 		return isWinner;
 	}
 
-	public void setWinner(boolean isWinner) {
+	public void setWinner(Boolean isWinner) {
 		this.isWinner = isWinner;
 	}
 
 	@Override
 	public String toString() {
-		return "Game [id=" + id + ", player=" + player + ", moves=" + moves + ", isWinner=" + isWinner + "]";
+		return "Game [id=" + id + ", date=" + date + ", sequence=" + sequence + ", isWinner=" + isWinner + "]";
 	}
-  
+
 }
