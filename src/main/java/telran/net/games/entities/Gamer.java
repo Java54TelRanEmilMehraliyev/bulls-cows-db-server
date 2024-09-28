@@ -1,4 +1,4 @@
-package telran.net.games;
+package telran.net.games.entities;
 import java.time.LocalDate;
 
 import jakarta.persistence.*;
@@ -20,10 +20,7 @@ public class Gamer {
 	public LocalDate getBirthdate() {
 		return birthdate;
 	}
-	@Override
-	public String toString() {
-		return "Gamer [username=" + username + ", birthdate=" + birthdate + "]";
-	}
+	
 	
 	
 	
