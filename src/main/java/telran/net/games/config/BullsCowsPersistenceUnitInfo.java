@@ -20,13 +20,13 @@ public class BullsCowsPersistenceUnitInfo implements PersistenceUnitInfo {
 
 	@Override
 	public String getPersistenceUnitName() {
-		
+
 		return "bulls-cows-persistence-unit";
 	}
 
 	@Override
 	public String getPersistenceProviderClassName() {
-		
+
 		return "org.hibernate.jpa.HibernatePersistenceProvider";
 	}
 
@@ -70,7 +70,7 @@ public class BullsCowsPersistenceUnitInfo implements PersistenceUnitInfo {
 	@Override
 	public List<URL> getJarFileUrls() {
 		// TODO Auto-generated method stub
-		
+
 		return null;
 	}
 
@@ -82,11 +82,9 @@ public class BullsCowsPersistenceUnitInfo implements PersistenceUnitInfo {
 
 	@Override
 	public List<String> getManagedClassNames() {
-		
-		return List.of("telran.net.games.entities.Gamer",
-				"telran.net.games.entities.Game",
-				"telran.net.games.entities.GameGamer",
-				"telran.net.games.entities.Move");
+
+		return List.of("telran.net.games.entities.Gamer", "telran.net.games.entities.Game",
+				"telran.net.games.entities.GameGamer", "telran.net.games.entities.Move");
 	}
 
 	@Override
@@ -109,7 +107,7 @@ public class BullsCowsPersistenceUnitInfo implements PersistenceUnitInfo {
 
 	@Override
 	public Properties getProperties() {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 

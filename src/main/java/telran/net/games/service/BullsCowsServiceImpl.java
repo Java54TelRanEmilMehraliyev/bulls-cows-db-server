@@ -152,7 +152,7 @@ public class BullsCowsServiceImpl implements BullsCowsService {
 	 * @return To be guessed sequence No Exceptions, that is implied that at the
 	 *         test gameId exists
 	 */
-	String getSequence(long gameId) {
+	public String getSequence(long gameId) {
 		Game game = bcRepository.getGame(gameId);
 		return game.getSequence();
 	}

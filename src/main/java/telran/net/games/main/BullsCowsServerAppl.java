@@ -5,13 +5,13 @@ import java.util.HashMap;
 import telran.net.Protocol;
 import telran.net.TcpServer;
 import telran.net.games.config.BullsCowsPersistenceUnitInfo;
-import telran.net.games.controller.BullsCowsProtocol; //FIXME create package with class
+import telran.net.games.controller.BullsCowsProtocol; //DONE create package with class
 import telran.net.games.repo.*;
 import telran.net.games.service.*;
 
 public class BullsCowsServerAppl {
 
-	private static final int PORT = 5000;
+	private static final int PORT = 5432;
 	private static final int N_DIGITS = 0;
 
 	public static void main(String[] args) {

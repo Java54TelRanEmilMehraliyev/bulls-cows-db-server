@@ -31,7 +31,7 @@ public MoveData moveProcessing(String guess, String toBeGuessed) {
 	}
 	return new MoveData(guess, bullsCows[0], bullsCows[1]);
 }
-boolean checkGuess(String guess) {
+public boolean checkGuess(String guess) {
 	return guess.chars().distinct().count() == nDigits;
 }
 boolean checkGameFinished(MoveData moveData) {

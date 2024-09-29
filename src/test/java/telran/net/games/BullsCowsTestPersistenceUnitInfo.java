@@ -6,7 +6,6 @@ import com.zaxxer.hikari.HikariDataSource;
 
 import telran.net.games.config.BullsCowsPersistenceUnitInfo;
 
-
 public class BullsCowsTestPersistenceUnitInfo extends BullsCowsPersistenceUnitInfo {
 	@Override
 	public DataSource getNonJtaDataSource() {
@@ -15,7 +14,7 @@ public class BullsCowsTestPersistenceUnitInfo extends BullsCowsPersistenceUnitIn
 		ds.setPassword("");
 		ds.setUsername("sa");
 		ds.setDriverClassName("org.h2.Driver");
-		
+
 		return ds;
 	}
 }
